@@ -1,1 +1,7 @@
-let bookDatabase[1,2,3,4,5];
+import {Book} from './Book.js';
+
+let bookList[];
+
+
+
+export { bookList };
