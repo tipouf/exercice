@@ -1,0 +1,32 @@
+package fr.nico.cheque;
+
+import java.util.Scanner;
+
+public class Cheque {
+
+	public static void main(String[] args) {
+		int nbCheque = 0;
+		float cheque = 0;
+		float totalCheque = 0;
+		float moyenneCheque = 0;
+		
+		do {
+		cheque = saisirValeur();
+		System.out.println(cheque);
+		nbCheque++;
+		totalCheque = totalCheque + cheque;
+		} while (cheque != 0);
+		
+        System.out.println(moyenneCheque);
+		System.out.println(nbCheque);
+	}
+	
+	/* saisie d'entier */
+	public static float saisirValeur() {
+		System.out.println("Entrez une valeur de chèque ou entrez 0 pour arréter");
+		Scanner saisie = new Scanner(System.in);
+		float valeur = saisie.nextFloat();
+		return valeur;
+	}
+
+}

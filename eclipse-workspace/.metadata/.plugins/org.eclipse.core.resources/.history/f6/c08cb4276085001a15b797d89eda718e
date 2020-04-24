@@ -1,0 +1,57 @@
+package fr.nico.cheque;
+
+import java.util.Scanner;
+
+public class Cheque {
+
+	public static void main(String[] args) {
+		int nbCheque = 0;
+		int nbChequeDeuxCent = 0;
+		int nbChequeMoinsDeuxCent = 0;
+		float newCheque = 0;
+		String numeroCheque = "";
+		String bestNumeroCheque = "";
+		float cheque = 0;
+		float totalCheque = 0;
+		float moyenneCheque = 0;
+		
+		do {
+		cheque = saisirValeur();
+		System.out.println("valeur saisie : " + cheque);
+		
+		if (cheque !=0) {
+			numeroCheque = saisirNumero();
+			System.out.println("numero de cheque saisie : " + numeroCheque);
+			nbCheque++;
+			if (cheque !=0) {
+			totalCheque = totalCheque + cheque;
+			moyenneCheque = totalCheque / nbCheque;
+			}
+			if  (cheque >= 200) {nbChequeDeuxCent++;} else { nbChequeMoinsDeuxCent++;}
+			if (newCheque > cheque) { 
+			newCheque = cheque; 
+			bestNumeroCheque = numeroCheque;}
+			}
+		} while (cheque != 0);
+		
+        System.out.println("moyenne des cheques: " + moyenneCheque);
+		System.out.println("nombres de cheques: " + nbCheque);
+		System.out.println("numero de cheque ayant la somme la plus importante: " + newCheque);
+	}
+	
+	/* saisie d'une valeur de chèque*/
+	public static float saisirValeur() {
+		System.out.println("Entrez une valeur de chèque ou entrez 0 pour arréter");
+		Scanner saisie = new Scanner(System.in);
+		float valeur = saisie.nextFloat();
+		return valeur;
+	}
+	/* saisie d'un numéro de chèque*/
+	public static String saisirNumero() {
+		System.out.println("Entrez le numéro du chèque");
+		Scanner saisie = new Scanner(System.in);
+		String valeur = saisie.next();
+		return valeur;
+	}
+
+}

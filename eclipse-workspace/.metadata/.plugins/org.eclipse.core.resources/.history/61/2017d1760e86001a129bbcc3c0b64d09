@@ -1,0 +1,74 @@
+package fr.nico.cheque;
+
+import java.util.Scanner;
+
+public class Cheque {
+
+	public static void main(String[] args) {
+				
+		float cheque = 1;
+		
+		do {
+				cheque = saisirValeur();
+				calculCheque(cheque);} 
+		 while (cheque !=0);
+	}
+		
+	public static float calculCheque(float cheque) {
+		int nbCheque = 0, nbChequeDeuxCent = 0, nbChequeMoinsDeuxCent = 0;
+		String bestNumeroCheque = "", lessNumeroCheque = "", numeroCheque = "";
+		float oldCheque = 0, petitCheque = cheque, totalCheque = 0, montantTotalPlus = 0, montantTotalMoins = 0, montantTotal = 0, moyenneCheque = 0;
+		
+				System.out.println("valeur saisie : " + cheque);
+				numeroCheque = saisirNumero();
+				System.out.println("numero de cheque saisie : " + numeroCheque);
+				nbCheque++;
+				totalCheque = totalCheque + cheque;
+				moyenneCheque = totalCheque / nbCheque;
+				if  (cheque >= 200) {
+					nbChequeDeuxCent++;
+					montantTotalPlus = montantTotalPlus + cheque;
+				} else { 
+					nbChequeMoinsDeuxCent++;
+					montantTotalMoins = montantTotalMoins + cheque;}
+				if (cheque > oldCheque) { 
+				oldCheque = cheque; 
+				bestNumeroCheque = numeroCheque;}
+				else { petitCheque = cheque;
+				lessNumeroCheque = numeroCheque;
+				}
+				montantTotal = montantTotalMoins+montantTotalPlus;
+
+		if (nbCheque !=0) {
+	        System.out.println("Moyenne des cheques: " + moyenneCheque);
+			System.out.println("Nombres de cheques: " + nbCheque);
+			System.out.println("Chèque ayant la somme la plus importante: " + oldCheque);
+			System.out.println("Numéro de chèque ayant la somme la plus important : " + bestNumeroCheque);
+			System.out.println("Chèque ayant la somme la moins importante: " + petitCheque);
+			System.out.println("Numéro de chèque ayant la somme la moins importante : " + lessNumeroCheque);
+			System.out.println("Nombre de chèque supérieur à 200 : " + nbChequeDeuxCent);
+			System.out.println("Nombre de chèque inférieur à 200: " + nbChequeMoinsDeuxCent);
+			System.out.println("montant total de chèque inférieur à 200 : " + montantTotalMoins) ;
+			System.out.println("montant total de chèque supérieur à 200 : " + montantTotalPlus);
+			System.out.println("montant total de chèque supérieur et inférieur à 200 : " + montantTotal);
+			System.out.println("montant total de chèque : " + totalCheque);}
+			else { System.out.println("Aucun chèque n'a été rentré!!!!. Merci et à bientôt.");}
+		return moyenneCheque;
+		}
+	/*
+
+
+	/* saisie d'une valeur de chèque*/
+	public static float saisirValeur() {
+		System.out.println("Entrez une valeur de chèque ou entrez 0 pour arréter");
+		Scanner saisie = new Scanner(System.in);
+		return saisie.nextFloat();
+	}
+	/* saisie d'un numéro de chèque*/
+	public static String saisirNumero() {
+		System.out.println("Entrez le numéro du chèque");
+		Scanner saisie = new Scanner(System.in);
+		return saisie.next();
+	}
+
+}

@@ -1,0 +1,41 @@
+package fr.nico.salaire;
+
+import java.util.Scanner;
+
+public class CalculSalaire {
+
+	float salaire = 15,50f ;
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Votre nom");
+		String nomPersonne = saisirString();
+		System.out.println("Votre prénom");
+		String prénomPersonne = saisirString();			
+		System.out.println("Votre Statut? tapez: 1 pour cadre, 2 pour agent de maîtrise ou 3 pour Employé de bureau.");
+		int statut = saisirInt();
+		System.out.println("nombre d'heure effectués?");
+		int nombreHeure = saisirInt();
+	}
+
+
+	
+	/* saisie chaînes de caractères */
+	public static String saisirString() {
+		Scanner saisie = new Scanner(System.in);
+		String result = saisie.nextLine();
+		return result;
+	}
+	/* saisie d'entier */
+	public static int saisirInt() {
+		Scanner saisie = new Scanner(System.in);
+		int result = saisie.nextInt();
+		return result;
+	}
+	/* calcul salaire */
+	public static int saisirInt(int heure) {
+		if (heure <= 169)	
+		return result = heure*salaire;
+	}
+}
+

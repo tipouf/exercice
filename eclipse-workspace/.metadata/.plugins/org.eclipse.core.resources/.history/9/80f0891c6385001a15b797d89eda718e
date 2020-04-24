@@ -1,0 +1,70 @@
+package fr.nico.cheque;
+
+import java.util.Scanner;
+
+public class Cheque {
+
+	public static void main(String[] args) {
+		int nbCheque = 0;
+		int nbChequeDeuxCent = 0;
+		int nbChequeMoinsDeuxCent = 0;
+		float oldCheque = 0;
+		String numeroCheque = "";
+		String bestNumeroCheque = "";
+		float cheque = 0;
+		float totalCheque = 0;
+		float montantTotalPlus = 0;
+		float montantTotalMoins = 0;
+		float montantTotal = montantTotalPlus + montantTotalMoins;
+		float moyenneCheque = 0;
+		
+		do {
+		cheque = saisirValeur();
+			if (cheque !=0) {	
+				System.out.println("valeur saisie : " + cheque);
+				numeroCheque = saisirNumero();
+				System.out.println("numero de cheque saisie : " + numeroCheque);
+				nbCheque++;
+				totalCheque = totalCheque + cheque;
+				moyenneCheque = totalCheque / nbCheque;
+				if  (cheque >= 200) {
+					nbChequeDeuxCent++;
+					montantTotalPlus = montantTotalPlus + cheque;
+				} else { 
+					nbChequeMoinsDeuxCent++;
+					montantTotalMoins = montantTotalMoins + cheque;}
+				if (cheque > oldCheque) { 
+				oldCheque = cheque; 
+				bestNumeroCheque = numeroCheque;}
+				}
+		} while (cheque != 0);
+		
+		if (nbCheque !=0) {
+        System.out.println("Moyenne des cheques: " + moyenneCheque);
+		System.out.println("Nombres de cheques: " + nbCheque);
+		System.out.println("Chèque ayant la somme la plus importante: " + oldCheque);
+		System.out.println("Nombre de chèque supérieur à 200 : " + nbChequeDeuxCent);
+		System.out.println("Nombre de chèque inférieur à 200: " + nbChequeMoinsDeuxCent);
+		System.out.println("montant total de chèque inférieur à 200 : " + montantTotalMoins) ;
+		System.out.println("montant total de chèque supérieur à 200 : " + montantTotalPlus);}
+		System.out.println("montant total de chèque supérieur et inférieur à 200 : " + montantTotalMoins+montantTotalPlus);
+		System.out.println("montant total de chèque : " + totalCheque);}
+		else { System.out.println("Aucun chèque n'a été rentré!!!!. Merci et à bientôt.");}
+	}
+	
+	/* saisie d'une valeur de chèque*/
+	public static float saisirValeur() {
+		System.out.println("Entrez une valeur de chèque ou entrez 0 pour arréter");
+		Scanner saisie = new Scanner(System.in);
+		float valeur = saisie.nextFloat();
+		return valeur;
+	}
+	/* saisie d'un numéro de chèque*/
+	public static String saisirNumero() {
+		System.out.println("Entrez le numéro du chèque");
+		Scanner saisie = new Scanner(System.in);
+		String valeur = saisie.next();
+		return valeur;
+	}
+
+}
