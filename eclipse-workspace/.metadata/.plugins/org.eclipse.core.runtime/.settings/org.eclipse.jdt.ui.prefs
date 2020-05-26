@@ -1,11 +1,17 @@
+CustomFiltersActionGroup.org.eclipse.jdt.ui.ProjectsView.TAG_DUMMY_TO_TEST_EXISTENCE=storedViewPreferences
 content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.String"/></lhs><lhs name\="java.util.Random"><rhs name\="java.security.SecureRandom"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.String"/></lhs><lhs name\="java.util.Random"><rhs name\="java.security.SecureRandom"/></lhs><lhs name\="fr.eni.ecole.entite.Rectangle"><rhs name\="fr.eni.ecole.entite.Rectangle"/></lhs></history>
 content_assist_number_of_computers=18
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
 eclipse.preferences.version=1
+lastRecentlyUsedFilters=org.eclipse.jdt.ui.ProjectsView.LibraryFilter,org.eclipse.jdt.ui.ProjectsView.ContainedLibraryFilter,
+org.eclipse.buildship.ui.packageexplorer.filter.gradle.buildfolder=true
+org.eclipse.buildship.ui.packageexplorer.filter.gradle.subProject=true
 org.eclipse.jdt.internal.ui.navigator.layout=2
 org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.ProjectsView.ContainedLibraryFilter=true
+org.eclipse.jdt.ui.ProjectsView.LibraryFilter=true
 org.eclipse.jdt.ui.formatterprofiles.version=18
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
