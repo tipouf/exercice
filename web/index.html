@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Le titre de la page</title>
+</head>
+
+<body>
+    <div id="myDiv">
+        <p>Un peu de texte <a>et un lien</a></p>
+    </div>
+    <div id="myDiv2">
+        <p>Un peu plus de texte <a>et un lien</a></p>
+    </div>
+
+    <script>
+        var div = document.getElementById('myDiv');
+        var div = document.getElementById('myDiv2');
+        var divs = document.getElementsByTagName('div');
+
+for (var i = 0, c = divs.length ; i < c ; i++) {
+    alert('Element n° ' + (i + 1) + ' : ' + divs[i]);
+}
+        alert(div);
+        alert('Hello world!');
+    
+    </script>
+
+</body>
+</html>

@@ -1,13 +1,46 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Ceci se passe de commentaire.
+-->
 <html>
 <head>
-<title>Hello World</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta http-equiv="Content-Language" content="fr" />
+ <meta name="author" content="Nicolas Cindon" />
+<link rel="stylesheet" href="style.css" />
+ <title>
+  Page Web Squelette
+ </title>
 </head>
-
 <body>
-    <script src="test.js"></script> // permet d'executer le contenu du fichier test.js
-    </script>
+    <form method="POST" action="traitement.php">
+        <p>
+            <label for="pseudo">Votre pseudo</label>
+            <input type="text" name="pseudo" id="pseudo" maxlength="7" value="Nicolas" placeholder="ici" />
+        </p>
+<hr />
+        <p>
 
+            <label for="password">Votre mot de passe</label>
+            <input type="password" name="password" id="password" maxlength="7" value="secret" placeholder="mot de passe" />
+
+        </p>
+<hr />
+        <p>
+
+            <label for="textarea">Zone de texte</label>
+            <textarea rows="10"> </textarea>
+
+        </p>
+
+    </form>
+
+<hr />
+
+<script src="tab.js"></script>
+
+<! --  <script src="test.js"></script> -->
 
 </body>
 </html>
