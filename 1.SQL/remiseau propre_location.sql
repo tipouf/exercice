@@ -9,7 +9,7 @@ GO
 */
 
 
-USE LOCATION;
+USE LOCATIONS;
 GO
 
 
@@ -119,8 +119,3 @@ CREATE NONCLUSTERED INDEX fk_lignesFic_fiches
 CREATE NONCLUSTERED INDEX fk_lignesFic_articles
 	ON lignesFic(refart ASC);
 GO
-
-
-insert grilleTarifs Values (10105, 10106,10107);
-insert grilleTarifs(codeGam,CodeCate,CodeTarif) Values (10105, 10106,10107);
-

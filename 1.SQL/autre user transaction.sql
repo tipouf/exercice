@@ -1,0 +1,1 @@
+select * from [Service]; --la requete est bloqué par notre serveur de donnée par le verrou de transaction tant que l'utilisateur n'a pas terminé sa transaction
